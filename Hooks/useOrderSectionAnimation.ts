@@ -13,14 +13,14 @@ export function useOrderSectionAnimation() {
 	const [isOpen, setIsOpen] = useState<"expanded" | "collapsed">("expanded");
 
 	const ShowSectionContent = async () => {
-		await animate(".expanded-title", { y: 0, opacity: 1 });
-		await animate(".expanded-p", { y: 0, opacity: 1 });
-		await animate(".expanded-btn", { x: 0, opacity: 1 }, { type: "keyframes" });
+		await animate(".expanded-title", { y: 0, opacity: 1 }, { duration: .25 });
+		await animate(".expanded-p", { y: 0, opacity: 1 }, { duration: .25 });
+		await animate(".expanded-btn", { y: 0, opacity: 1 }, { duration: .25 });
 	};
 	const HideSectionContent = async () => {
-		animate(".expanded-title", { y: -50, opacity: 0 });
-		animate(".expanded-p", { y: -50, opacity: 0 });
-		animate(".expanded-btn", { x: -50, opacity: 0 });
+		animate(".expanded-title", { y: -10, opacity: 0 }, { duration: .15 });
+		animate(".expanded-p", { y: -10, opacity: 0 }, { duration: .15 });
+		animate(".expanded-btn", { y: -10, opacity: 0 }, { duration: .15 });
 	};
 
 	const DesktopSectionAnimationHandler = async (id: string, ref: React.RefObject<any>) => {
