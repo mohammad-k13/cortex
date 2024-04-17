@@ -28,6 +28,7 @@ function Page() {
 			<div className="max-md:hidden h-full flex items-center justify-between px-3 gap-5 relative overflow-hidden">
 				{SectionsInfo.map((section: SectionInfo, index: number) => (
 					<GetOrderCard
+						key={index}
 						Info={section}
 						index={index}
 						isOpen={isOpen}
