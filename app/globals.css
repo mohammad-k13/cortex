@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,16 +24,52 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #fcfcfc;
+  user-select: none;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+
+  .nav {
+    @apply w-full max-w-[2000px] text-black rounded-3xl mx-auto h-full flex items-center justify-between lg:px-10 px-5
+  }
+
+  .logo {
+    @apply w-16 h-16 rounded-full bg-black
+  }
+
+  .logo img{
+    mix-blend-mode: multiply;
+  }
+
+  .aside {
+    @apply w-1/4 max-[850px]:w-3/5 h-full relative max-md:w-full max-md:h-full
+  }
+
+  .canvas-container {
+    @apply w-[400px] max-md:w-full h-full max-md:h-[90%] max-md:top-0 absolute -left-[200px] max-[850px]:left-1/2 max-[850px]:-translate-x-1/2 transition-all
+  }
+
+  .hero-container {
+    @apply w-[100vw] min-h-[100vh] bg-[#fcfcfc] relative flex flex-row-reverse items-center justify-between max-md:flex-col
+  }
+
+  .hero-text--container {
+    @apply w-fit flex items-start justify-start gap-3 flex-col text-black lg:pl-10 pl-5 max-md:pl-0 max-md:w-[95%] max-md:mt-4 max-md:mx-auto max-md:items-center max-md:absolute max-md:bottom-[10%] z-50 max-md:text-[#fcfcfc]
+  }
+  .hero-h2 {
+    @apply lg:text-9xl text-7xl max-[850px]:text-4xl font-bold max-md:text-3xl
+  }
+  .hero-p {
+    @apply lg:text-xl md:text-lg text-xl w-full mt-5 max-md:text-center
+  }
+  .hero-button-black {
+    @apply  flex-center text-lg border border-black bg-black text-[#fcfcfc] p-1 px-3 py-2 hover:bg-transparent hover:text-black transition-all max-md:text-black max-md:border-[#fcfcfc] max-md:bg-[#fcfcfc] max-md:hover:bg-transparent max-md:hover:text-[#fcfcfc]
+  }
+  .hero-button-white {
+    @apply  flex-center text-lg border border-white bg-white text-[#333] p-1 px-3 py-2 hover:bg-transparent hover:text-white transition-all max-md:text-white max-md:border-[#333] max-md:bg-[#333] max-md:hover:bg-transparent max-md:hover:text-[#333]
   }
 }
