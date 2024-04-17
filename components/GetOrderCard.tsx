@@ -16,9 +16,12 @@ function GetOrderCard({ Info, index, onClick, isOpen }: GetOrderCardProps) {
 
 
 	return (
-		<section
+		<motion.section
 			key={index}
 			id={`${Info.id}`}
+			initial={{width: 0, height:0, opacity: 0}}
+			animate={{width: 400, height: 280, opacity: 1}}
+			transition={{delay: index * .25}}
 			ref={ref}
 			className={`rounded-xl z-20 w-[400px] h-[280px] shadow-lg relative overflow-hidden flex justify-center`}
 			onClick={() => onClick(ref)}
@@ -32,7 +35,7 @@ function GetOrderCard({ Info, index, onClick, isOpen }: GetOrderCardProps) {
 				<p className="text-lg w-3/4 text-justify expanded-p text-white opacity-0">{Info.ProductInfo.description}</p>
 				<Button title="Order Now" isWhite={true} className="expanded-btn opacity-0"/>
 			</main>
-		</section>
+		</motion.section>
 	);
 }
 
