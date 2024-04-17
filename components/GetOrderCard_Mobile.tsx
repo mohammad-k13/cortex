@@ -1,5 +1,8 @@
+"use client"
+
 import { SectionInfo } from "@/constants";
 import React, { useRef } from "react";
+import {motion} from 'framer-motion'
 import Button from "./Button";
 
 type GetOrderCardMobileProps = {
@@ -13,10 +16,13 @@ function GetOrderCardMobile({ Info, index, onClick, isOpen }: GetOrderCardMobile
 	const ref = useRef<HTMLElement>(null);
 
 	return (
-		<section
+		<motion.section
 			key={index}
 			id={`${Info.id}`}
 			ref={ref}
+			initial={{width: 0, height:0, opacity: 0}}
+			animate={{width: 400, height: 280, opacity: 1}}
+			transition={{delay: index * .25}}
 			className={`rounded-xl z-20 md:w-90% mx-auto h-[380px] shadow-lg relative overflow-hidden flex justify-center`}
 			onClick={() => onClick(ref)}
 			style={{ backgroundColor: "#cccc" }}>
@@ -33,7 +39,7 @@ function GetOrderCardMobile({ Info, index, onClick, isOpen }: GetOrderCardMobile
 				</p>
 				<Button title="Order Now" isWhite={false} className="expanded-btn opacity-0"/>
 			</main>
-		</section>
+		</motion.section>
 	);
 }
 
