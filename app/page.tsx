@@ -32,7 +32,7 @@ export default function Home() {
 		animate(
 			".toast",
 			{ width: 0, height: 0, opacity: 0, zIndex: -10 },
-			{ type: "spring", duration: 0.56, damping: 5 },
+			{ type: "spring", duration: 0.56, damping: 10 },
 		);
 		await animate(".toast-container", { opacity: 0 });
 		animate(".button", { scale: 1, zIndex: 10 });
