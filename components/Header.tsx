@@ -8,11 +8,12 @@ import { motion } from "framer-motion";
 import LogoImg from "../public/NavBarLogo.png";
 import { type NavItemInfo, NavItems } from "@/constants";
 import Link from "next/link";
+import MenuButton from "./MenuButton";
 
 function Header() {
 	return (
 		<header className="w-full h-12 absolute top-0 z-50">
-			<nav className="nav flex-row-reverse">
+			<nav className="nav flex-row-reverse max-md:hidden">
 				<div className="flex-center">
 					<Image
 						src={LogoImg}
@@ -30,6 +31,10 @@ function Header() {
 						</motion.li>
 					))}
 				</ul>
+			</nav>
+
+			<nav className="nav flex-row-reverse md:hidden">
+				<MenuButton />
 			</nav>
 		</header>
 	);
