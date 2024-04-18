@@ -18,7 +18,7 @@ function CameraRig(props: any) {
 		
 		easing.dampE(
 			groupRef.current!.rotation,
-			[-state.pointer.y / 6, state.pointer.x / 6, 0, "XYZ"],
+			[-state.pointer.y / 2, state.pointer.x / 2, 0, "XYZ"],
 			0.25,
 			delta,
 		);
