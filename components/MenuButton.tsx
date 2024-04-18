@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, MotionConfig } from "framer-motion";
 import { useState } from "react";
 
@@ -8,9 +10,10 @@ function MenuButton() {
 	return (
 		<MotionConfig transition={{ duration: 0.5, ease: "easeInOut" }}>
 			<motion.button
-				onClick={() => setActive((pv) => !pv)}
+				className="group relative bg-white/0 w-12 h-12 rounded-full hover:bg-white/20"
+				initial={false}
 				animate={active ? "open" : "close"}
-				className="group relative bg-white/0 w-12 h-12 rounded-full hover:bg-white/20">
+				onClick={() => setActive((pv) => !pv)}>
 				<motion.span
 					style={{
 						top: "35%",

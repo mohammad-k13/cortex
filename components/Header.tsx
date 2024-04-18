@@ -12,7 +12,7 @@ import MenuButton from "./MenuButton";
 
 function Header() {
 	return (
-		<header className="w-full h-12 absolute top-0 z-50">
+		<header className="w-full h-14  absolute top-0 z-50">
 			<nav className="nav flex-row-reverse max-md:hidden">
 				<div className="flex-center">
 					<Image
