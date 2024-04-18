@@ -53,7 +53,7 @@ export default function Home() {
 					className="toast w-[300px] h-[100px] bg-white shadow-ld rounded-xl flex items-center justify-between py-5 flex-col"
 					onClick={HideToastHandler}>
 					<h1 className="text-black w-[70%] text-center">
-						IF I HAD A FACE LIEK YOURS, I'D SUE MY PARENTS.
+						IF I HAD A FACE LIEK YOURS, I&apos;D SUE MY PARENTS.
 					</h1>
 					<p className="text-sm text-gray-500 text-center">
 						poor loser
