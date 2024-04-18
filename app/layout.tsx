@@ -17,9 +17,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${poppins.className} flex-center flex-row`}>
+			<body className={poppins.className}>
 				{/* <Header /> */}
-				
 				<main className="max-w-[1950px] max-h-[1080px] mx-auto">{children}</main>
 			</body>
 		</html>
