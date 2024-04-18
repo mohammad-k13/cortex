@@ -24,7 +24,7 @@ export default function Home() {
 		await animate(".toast-container", { opacity: 1 });
 		animate(
 			".toast",
-			{ width: 300, height: 200, opacity: 1, zIndex: 20 },
+			{ width: 300, height: 250, opacity: 1, zIndex: 20 },
 			{ type: "spring", duration: 0.56, damping: 5 },
 		);
 	};
@@ -50,7 +50,7 @@ export default function Home() {
 
 			<div className="toast-container w-full h-full bg-[#33333360] absolute flex-center opacity-0">
 				<div
-					className="toast w-[300px] h-[100px] bg-white shadow-ld rounded-xl flex items-center justify-between py-5 flex-col"
+					className="toast w-[300px] bg-white shadow-ld rounded-xl flex items-center justify-between py-5 flex-col"
 					onClick={HideToastHandler}>
 					<h1 className="text-black w-[200px] text-center">
 						YOU MUST HAVE BEEN BORN ON A HIGHWAY BECAUSE THAT&apos;S WHERE MOST ACCIDENTS HAPPEN.
