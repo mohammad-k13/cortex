@@ -17,11 +17,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${poppins.className} flex-center`}>
+			<body className={`${poppins.className} flex-center flex-row`}>
 				{/* <Header /> */}
-				<h2 className="text-4xl text-black">غلام کونی</h2>
-				<h1 className="text-3xl text-black mt-5">پشمم نیستی				</h1>
-				{/* <main className="max-w-[1950px] max-h-[1080px] mx-auto">{children}</main> */}
+				
+				<main className="max-w-[1950px] max-h-[1080px] mx-auto">{children}</main>
 			</body>
 		</html>
 	);
