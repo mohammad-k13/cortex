@@ -5,14 +5,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 //LOCAL
-import LogoImg from "../public/NavBarLogo.png";
+import LogoImg from "../../public/NavBarLogo.png";
 import { type NavItemInfo, NavItems } from "@/constants";
 import Link from "next/link";
 import MenuButton from "./MenuButton";
+import MobileHeader from "./MobileHeader";
 
 function Header() {
 	return (
-		<header className="w-full h-14  absolute top-0 z-50">
+		<header className="w-full h-14 absolute top-0 z-50">
 			<nav className="nav flex-row-reverse max-md:hidden">
 				<div className="flex-center">
 					<Image
@@ -32,10 +33,7 @@ function Header() {
 					))}
 				</ul>
 			</nav>
-
-			<nav className="nav flex-row-reverse md:hidden">
-				<MenuButton />
-			</nav>
+			<MobileHeader />
 		</header>
 	);
 }

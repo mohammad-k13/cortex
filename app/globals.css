@@ -58,7 +58,7 @@ body {
   }
 
   .hero-text--container {
-    @apply w-fit flex items-start justify-start gap-3 flex-col text-black lg:pl-10 pl-5 max-md:pl-0 max-md:w-[95%] max-md:mt-4 max-md:mx-auto max-md:items-center max-md:absolute max-md:bottom-[10%] z-50 max-md:text-[#fcfcfc]
+    @apply w-fit flex items-start justify-start gap-3 flex-col text-black lg:pl-10 pl-5 max-md:pl-0 max-md:w-[95%] max-md:mt-4 max-md:mx-auto max-md:items-center max-md:absolute max-md:bottom-[10%] z-30 max-md:text-[#fcfcfc]
   }
   .hero-h2 {
     @apply lg:text-9xl text-7xl max-[850px]:text-4xl font-bold max-md:text-3xl

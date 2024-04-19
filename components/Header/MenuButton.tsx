@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
 import { motion, MotionConfig } from "framer-motion";
 import { useState } from "react";
 
-function MenuButton() {
-	const [active, setActive] = useState<boolean>(false);
-	console.log(active);
+type MenuButtonProps = { active: boolean; setActive: (state: (pv: boolean) => boolean) => void };
 
+function MenuButton({ active, setActive }: MenuButtonProps) {
+	useState();
 	return (
 		<MotionConfig transition={{ duration: 0.5, ease: "easeInOut" }}>
 			<motion.button
-				className="group relative bg-white/0 w-12 h-12 rounded-full hover:bg-white/20"
+				className="group relative bg-white/0 w-12 h-12 rounded-full hover:bg-white/20 z-50"
 				initial={false}
 				animate={active ? "open" : "close"}
 				onClick={() => setActive((pv) => !pv)}>
@@ -26,14 +26,16 @@ function MenuButton() {
 							rotate: ["0deg", "0deg", "45deg"],
 							top: ["35%", "50%", "50%"],
 							width: "1.5rem",
+							backgroundColor: "#000"
 						},
 						close: {
 							rotate: ["45deg", "0deg", "0deg"],
 							top: ["50%", "50%", "35%"],
 							width: ".75rem",
+							backgroundColor: "#fff"
 						},
 					}}
-					className="absolute w-3 h-1 bg-white "
+					className="absolute w-3 h-1 bg-white"
 				/>
 				<motion.span
 					style={{
@@ -46,7 +48,7 @@ function MenuButton() {
 						open: { opacity: 0, zIndex: -5 },
 						close: { opacity: 1, zIndex: 0 },
 					}}
-					className="absolute w-6 h-1 bg-white "
+					className="absolute w-6 h-1 bg-white"
 				/>
 				<motion.span
 					style={{
@@ -60,11 +62,13 @@ function MenuButton() {
 							rotate: ["0deg", "0deg", "-45deg"],
 							bottom: ["35%", "50%", "50%"],
 							width: "1.5rem",
+							backgroundColor: "#000"
 						},
 						close: {
 							rotate: ["-45deg", "0deg", "0deg"],
 							bottom: ["50%", "50%", "35%"],
 							width: ".75rem",
+							backgroundColor: "#fff"
 						},
 					}}
 					className="absolute w-3 h-1 bg-white"
