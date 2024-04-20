@@ -36,7 +36,7 @@ function Page() {
 					/>
 				))}
 			</div>
-			<div className="md:hidden min-h-dvh flex-center flex-col gap-10 pt-16">
+			<div className="md:hidden w-full min-h-dvh flex-center flex-col gap-10 pt-16">
 				{SectionsInfo.map((section: SectionInfo, index: number) => (
 					<GetOrderCardMobile
 						key={index}
