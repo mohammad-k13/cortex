@@ -36,7 +36,7 @@ function MobileHeader() {
 				{active && (
 					<motion.ul
 						initial={{width: 0, opacity: 0}}
-						className="h-screen flex-center flex-col gap-7 absolute top-0 right-0 bg-white z-40"
+						className="h-screen flex-center items-start flex-col gap-7 absolute top-0 right-0 bg-white z-40"
 						onClick={() => setActive((pv) => !pv)}
 						variants={ToggleMenu}
 						animate={active && "open"}
