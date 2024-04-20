@@ -15,14 +15,14 @@ const ToggleMenu = {
 		right: 0,
 		top: 0,
 		width: "80dvw",
-		height: "100dvh",
+		height: "100vh",
 		opacity: 1,
 	},
 	close: {
-		right: -10,
-		top: -10,
+		right: 0,
+		top: 0,
 		width: 0,
-		height: "100dvh",
+		height: "100vh",
 		opacity: 0,
 	},
 };

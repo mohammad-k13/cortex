@@ -13,7 +13,7 @@ export default function Home() {
 	const [scope, animate] = useAnimate();
 
 	return (
-		<section className="w-full min-h-[100vh] flex relative overflow-hidden">
+		<section className="w-full h-dvh flex relative overflow-hidden">
 			<Section sectionInfo={SectionsInfo.find((sec) => sec.id === currentSection)!} />
 			{/* Slide Controllers */}
 			<HomeNavigation />
