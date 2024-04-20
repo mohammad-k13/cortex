@@ -9,16 +9,8 @@ export const NavItems: NavItemInfo[] = [
 		path: "/",
 	},
 	{
-		name: "About Us",
-		path: "/about",
-	},
-	{
 		name: "Shop",
 		path: "/shop",
-	},
-	{
-		name: "Login",
-		path: "/login",
 	},
 ];
 

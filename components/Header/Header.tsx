@@ -23,11 +23,12 @@ function Header() {
 						height={16}
 					/>{" "}
 				</div>
-				<ul className="w-2/5 h-full flex items-center justify-around ">
+				<ul className="w-2/5 h-full flex items-center justify-start gap-10">
 					{NavItems.map((navItem: NavItemInfo, index: number) => (
 						<motion.li
 							key={index}
-							style={{ color: "#030303" }}>
+							style={{ color: "#030303" }}
+							whileHover={{scale: 1.05}}>
 							<Link href={navItem.path}>{navItem.name}</Link>
 						</motion.li>
 					))}
