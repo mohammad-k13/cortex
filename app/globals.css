@@ -54,7 +54,7 @@ body {
   }
 
   .hero-container {
-    @apply w-[100vw] min-h-[100vh] bg-[#fcfcfc] relative flex flex-row-reverse items-center justify-between max-md:flex-col
+    @apply w-screen h-full bg-[#fcfcfc] relative flex flex-row-reverse items-center justify-between max-md:flex-col
   }
 
   .hero-text--container {
