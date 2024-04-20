@@ -40,7 +40,7 @@ function MobileHeader() {
 			/>
 			<motion.ul
 				initial={false}
-				className="flex-center flex-col gap-7 absolute top-0 right-0 opacity-0 bg-white z-40"
+				className="flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
 				onClick={() => setActive(pv => !pv)}
 				variants={ToggleMenu}>
 				{NavItems.map((navItem, index: number) => (
