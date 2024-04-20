@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 //LOCAL IMPORT
@@ -32,17 +32,23 @@ function MobileHeader() {
 				active={active}
 				setActive={setActive}
 			/>
-			<motion.ul
-				initial={false}
-				className="h-full flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
-				onClick={() => setActive(pv => !pv)}
-				variants={ToggleMenu}>
-				{NavItems.map((navItem, index: number) => (
-					<li className="text-black text-3xl" key={index}>
-						<Link href={navItem.path}>{navItem.name}</Link>
-					</li>
-				))}
-			</motion.ul>
+			<AnimatePresence>
+				{active && (
+					<motion.ul
+						initial={false}
+						className="h-full flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
+						onClick={() => setActive((pv) => !pv)}
+						variants={ToggleMenu}>
+						{NavItems.map((navItem, index: number) => (
+							<li
+								className="text-black text-3xl"
+								key={index}>
+								<Link href={navItem.path}>{navItem.name}</Link>
+							</li>
+						))}
+					</motion.ul>
+				)}
+			</AnimatePresence>
 			<div className="flex-center justify-self-start">
 				<Image
 					src={LogoImg}
