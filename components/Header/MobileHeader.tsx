@@ -38,7 +38,8 @@ function MobileHeader() {
 						initial={false}
 						className="h-full flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
 						onClick={() => setActive((pv) => !pv)}
-						variants={ToggleMenu}>
+						variants={ToggleMenu}
+						animate={active ? "open" : "close"}>
 						{NavItems.map((navItem, index: number) => (
 							<li
 								className="text-black text-3xl"
