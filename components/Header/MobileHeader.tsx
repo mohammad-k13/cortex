@@ -38,7 +38,7 @@ function MobileHeader() {
 				active={active}
 				setActive={setActive}
 			/>
-			<motion.ul
+			{/* <motion.ul
 				initial={false}
 				className="flex-center flex-col gap-7 absolute top-0 right-0 opacity-0 bg-white z-40"
 				onClick={() => setActive(pv => !pv)}
@@ -48,7 +48,7 @@ function MobileHeader() {
 						<Link href={navItem.path}>{navItem.name}</Link>
 					</li>
 				))}
-			</motion.ul>
+			</motion.ul> */}
 			<div className="flex-center justify-self-start">
 				<Image
 					src={LogoImg}
