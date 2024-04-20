@@ -17,7 +17,7 @@ const ToggleMenu = {
 	},
 	close: {
 		width: 0,
-		opacity: 1,
+		opacity: 0,
 	},
 };
 
@@ -32,20 +32,24 @@ function MobileHeader() {
 				active={active}
 				setActive={setActive}
 			/>
-			<AnimatePresence>
+			<AnimatePresence mode="wait">
 				{active && (
 					<motion.ul
-						initial={false}
-						className="h-full flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
+						initial={{width: 0, opacity: 0}}
+						className="h-screen flex-center flex-col gap-7 absolute top-0 right-0 bg-white z-40"
 						onClick={() => setActive((pv) => !pv)}
 						variants={ToggleMenu}
-						animate={active ? "open" : "close"}>
+						animate={active && "open"}
+						exit={active ? "close" : ""}>
 						{NavItems.map((navItem, index: number) => (
-							<li
+							<motion.li
+								initial={{x: -10, scale: 0, opacity: 0}}
+								animate={{x: 0, opacity: 1, scale: 1}}
+								transition={{delay: index * .25}}
 								className="text-black text-3xl"
 								key={index}>
 								<Link href={navItem.path}>{navItem.name}</Link>
-							</li>
+							</motion.li>
 						))}
 					</motion.ul>
 				)}

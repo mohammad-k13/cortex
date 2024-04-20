@@ -24,12 +24,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background-color: red; */
+  background-color: #fcfcfc;
   user-select: none;
-}
-
-* {
-  border: 1px solid green;
 }
 
 @layer utilities {
