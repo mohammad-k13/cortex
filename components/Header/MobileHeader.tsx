@@ -12,18 +12,12 @@ import Link from "next/link";
 
 const ToggleMenu = {
 	open: {
-		right: 0,
-		top: 0,
 		width: "80%",
-		height: "100vh",
 		opacity: 1,
 	},
 	close: {
-		right: 0,
-		top: 0,
 		width: 0,
-		height: "100vh",
-		opacity: 0,
+		opacity: 1,
 	},
 };
 
@@ -40,7 +34,7 @@ function MobileHeader() {
 			/>
 			<motion.ul
 				initial={false}
-				className="flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
+				className="h-full flex-center flex-col gap-7 absolute top-0 right-0 bg-red-500 z-40"
 				onClick={() => setActive(pv => !pv)}
 				variants={ToggleMenu}>
 				{NavItems.map((navItem, index: number) => (
