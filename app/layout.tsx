@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${poppins.className} overflow-x-hidden`}>
+			<body className={`${poppins.className} overflow-hidden w-screen h-screen max-w-[1950px] max-h-[1080px]`}>
 				<Header />
-				<main className="w-screen h-screen max-w-[1950px] max-h-[1080px] mx-auto overflow-hidde">{children}</main>
+				<main className="w-full h-full mx-auto overflow-hidde">{children}</main>
 			</body>
 		</html>
 	);
