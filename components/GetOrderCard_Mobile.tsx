@@ -21,9 +21,9 @@ function GetOrderCardMobile({ Info, index, onClick, isOpen }: GetOrderCardMobile
 			id={`${Info.id}`}
 			ref={ref}
 			initial={{ width: 0, height: 0, opacity: 0 }}
-			animate={{ width: "90%", height: 280, opacity: 1 }}
+			animate={{ width: "90%", height: 180, opacity: 1 }}
 			transition={{ delay: index * 0.25 }}
-			className={`rounded-xl z-20 w-90% mx-auto h-[380px] shadow-lg relative overflow-hidden flex justify-center`}
+			className={`rounded-xl z-20 w-90% mx-auto h-[180px] shadow-lg relative overflow-hidden flex justify-center`}
 			onClick={() => onClick(ref)}
 			style={{ backgroundColor: "#cccc" }}>
 			<div

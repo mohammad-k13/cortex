@@ -74,6 +74,7 @@ export function useOrderSectionAnimation() {
 			if (MobileSectionSelectedId === id) {
 				animate(`#${MobileSectionSelectedId}`, {
 					height: 800,
+					y: 0
 				});
 				await animate(".colorize-circle", { width: 1400, height: 1400, left: -300, top: -300 });
 				ShowSectionContent();
@@ -87,9 +88,10 @@ export function useOrderSectionAnimation() {
 
 			animate(`#${id}`, {
 				width: "90%",
-				height: 280,
+				height: 200,
 				opacity: 1,
 				zIndex: 1,
+				y: 0
 			});
 			animate(
 				".colorize-circle",
