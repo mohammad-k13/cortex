@@ -24,7 +24,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: red;
+  /* background-color: red; */
   user-select: none;
 }
 
