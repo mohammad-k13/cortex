@@ -24,8 +24,8 @@ function Page() {
 	return (
 		<div
 			ref={DesktopScope}
-			className="w-full h-screen max-h-[1280px] ">
-			<div className="max-md:hidden h-full flex items-center justify-between px-3 gap-5 relative overflow-hidden">
+			className="w-full">
+			<div className="max-md:hidden h-screen max-h-[1080px] flex items-center justify-between px-3 gap-5 relative overflow-hidden">
 				{SectionsInfo.map((section: SectionInfo, index: number) => (
 					<GetOrderCard
 						key={index}
@@ -36,7 +36,7 @@ function Page() {
 					/>
 				))}
 			</div>
-			<div className="md:hidden h-full flex-center flex-col gap-10 mt-14">
+			<div className="md:hidden min-h-dvh flex-center flex-col gap-10 pt-16">
 				{SectionsInfo.map((section: SectionInfo, index: number) => (
 					<GetOrderCardMobile
 						key={index}

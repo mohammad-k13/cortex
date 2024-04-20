@@ -14,20 +14,16 @@ const ToggleMenu = {
 	open: {
 		right: 0,
 		top: 0,
-		width: "100dvw",
+		width: "80dvw",
 		height: "100dvh",
 		opacity: 1,
-		transformOrigin: "top right",
-		borderRadius: 0,
 	},
 	close: {
 		right: -10,
 		top: -10,
 		width: 0,
-		height: 0,
+		height: "100dvh",
 		opacity: 0,
-		transformOrigin: "top right",
-		borderRadius: "50%",
 	},
 };
 
@@ -44,7 +40,8 @@ function MobileHeader() {
 			/>
 			<motion.ul
 				initial={false}
-				className="flex-center flex-col gap-7 absolute top-[-10px] right-[-10px] opacity-0 bg-white z-40"
+				className="flex-center flex-col gap-7 absolute top-0 right-0 opacity-0 bg-white z-40"
+				onClick={() => setActive(pv => !pv)}
 				variants={ToggleMenu}>
 				{NavItems.map((navItem, index: number) => (
 					<li className="text-black text-3xl" key={index}>
